@@ -1,0 +1,56 @@
+{
+  "name": "talkdeal_api",
+  "version": "1.0.0",
+  "description": "This is a bidding App API done with Node.js, Express, and Postgrss_DB.",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx babel -d ./build ./src -s",
+    "dev": "nodemon --exec babel-node src/app.js",
+    "prestart": "npm run build",
+    "start": "node ./build/app.js",
+    "postbuild": "npm run migrate",
+    "heroku-postbuild": "npm run migrate",
+    "migrate": "npx sequelize db:migrate",
+    "undo-migrate": "npx sequelize db:migrate:undo:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tboy44wiz/TalkDea_API.git"
+  },
+  "keywords": [
+    "API",
+    "Bidding_App_API"
+  ],
+  "author": "Osondu Tochukwu (tosolife@yahoo.com, +234 8036802243)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tboy44wiz/TalkDea_API/issues"
+  },
+  "homepage": "https://github.com/tboy44wiz/TalkDea_API#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.7.8",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "otp-generator": "^4.0.0",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.6",
+    "sequelize-cli": "^6.4.1",
+    "socket.io": "^4.5.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.0",
+    "@babel/node": "^7.18.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.19.0",
+    "@babel/register": "^7.18.9",
+    "nodemon": "^2.0.19"
+  }
+}
