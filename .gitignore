@@ -14,8 +14,10 @@
 .idea
 
 # dotenv environment variable files
-.env
+#.env
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+public/
+src/database/seeders/
