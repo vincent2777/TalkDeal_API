@@ -4,14 +4,8 @@
   "description": "This is a bidding App API done with Node.js, Express, and Postgrss_DB.",
   "main": "app.js",
   "scripts": {
-    "build": "npx babel -d ./build ./src -s",
-    "dev": "nodemon --exec babel-node src/app.js",
-    "prestart": "npm run build",
-    "start": "node ./build/app.js",
-    "postbuild": "npm run migrate",
-    "heroku-postbuild": "npm run migrate",
-    "migrate": "npx sequelize db:migrate",
-    "undo-migrate": "npx sequelize db:migrate:undo:all"
+    "dev": "nodemon ./src/app.js",
+    "start": "node ./src/app.js"
   },
   "repository": {
     "type": "git",
