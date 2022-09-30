@@ -60,9 +60,9 @@ class UsersController {
 
 
             //  Send OTP to users mail.
-            // await SendOTPMail.sendMail(name, email, otp);
-            const emailResponse = await SendOTPMail.sendMail(name, email, otp);
-            console.log("EMAIL RESPONSE::: ", emailResponse);
+            await SendOTPMail.sendMail(name, email, otp);
+            // const emailResponse = await SendOTPMail.sendMail(name, email, otp);
+            // console.log("EMAIL RESPONSE::: ", emailResponse.response);
 
 
             const response = new Response(

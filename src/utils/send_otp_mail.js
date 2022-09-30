@@ -78,7 +78,7 @@ const emailBody = (userName, otp) => {
             <body>
                 <div class="container">
                     <img src="../assets/images/app_logo1.png" height="50" alt="Super Punter Logo" />
-                    <h2>Verify OTP.</h2>
+                    <h2>Verify OTP</h2>
                     <p>
                         Thanks ${userName} for signing up on Talk Deal! <br />
                         Use the following OTP to complete your SignUp process. Kindly know that this OTP is valid for 15 minutes.
